@@ -2,31 +2,41 @@ const config = [
   {
     path: '/',
     name: 'login',
-    component: () => import('@/views/login.vue')
+    component: () => import('@/views/login')
   },
+  // {
+  //   path: '/home',
+  //   name: 'home',
+  //   component: () => import('@/views/home'),
+  //   meta: {
+  //     title: '会员首页',
+  //     permission: ''
+  //   }
+  // },
   {
-    path: 'index',
+    path: '/index',
     name: 'index',
-    component: () => import('@/views/layout/index.vue')
-  },
-  {
-    path: 'main',
-    // redirect: '/home',
-    component: () => import('@/views/layout/components/Main.vue'),
-    meta: {
-      title: '系统中心',
-      hidden: true,
-      permission: ''
-    }
-    // children: [{
-    //   path: 'home',
-    //   name: 'home',
-    //   component: () => import('@/views/home/index'),
-    //   meta: {
-    //     title: '会员首页',
-    //     permission: ''
-    //   }
-    // }]
+    component: () => import('@/views/layout/index'),
+    children: [
+      {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/views/home'),
+      meta: {
+        title: '会员首页',
+        permission: ''
+      }
+      },
+      {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/views/test'),
+        meta: {
+          title: 'test',
+          permission: ''
+        }
+      }
+    ]
   }
 ]
 export default config

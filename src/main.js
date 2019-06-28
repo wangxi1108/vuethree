@@ -4,6 +4,8 @@ import router from './router'
 import vuex from 'vuex'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '@/assets/styles/layout.less'
+
 
 Vue.use(ElementUI)
 Vue.use(vuex)

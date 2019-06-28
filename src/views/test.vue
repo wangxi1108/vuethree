@@ -1,6 +1,6 @@
 <template>
   <div>
-    header
+    test页面进来的到不
   </div>
 </template>
 <script>
